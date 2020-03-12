@@ -1,0 +1,32 @@
+{
+	"file": "../data/NewMoviesSample/newMovieAllPoster.csv",
+	"name": "Movies",
+	"header": 0,
+	"separator": ",",
+	"skip": 0,
+	"meta": [
+		{ "type": "id", "index": 6, "name": "Title","tableDisplay":"true" },
+		{ "type": "date", "format":"YYYY", "outFormat":"YYYY", "index": 16, "name": "Year","tableDisplay":"true" },
+		{ "type": "float", "index": 17, "name": "IMDB_Score","tableDisplay":"true"  },
+		{ "type": "text", "index": 14, "name": "Content_Rating","tableDisplay":"true" },
+		{ "type": "integer", "index": 15, "name": "Budget","tableDisplay":"true"  },
+		{ "type": "integer","index": 5, "name": "Gross","tableDisplay":"true"  },
+		{ "type": "integer","index": 2, "name": "Duration","tableDisplay":"true"  },
+		{ "type": "text", "index": 12, "name": "Language","tableDisplay":"true" },
+		{ "type": "text", "index": 13, "name": "Country","tableDisplay":"true" },		
+		{ "type": "text", "index": 1, "name": "Director","tableDisplay":"true"  },		
+		{ "type": "text", "index": 3, "name": "Actor1","tableDisplay":"true" },
+		{ "type": "integer", "index": 7, "name": "Voted_Users","tableDisplay":"true"  },
+		{ "type": "integer", "index": 11, "name": "User_Reviews","tableDisplay":"true"  },	
+		{ "type": "id", "index": 0, "name": "ID" , "tableDisplay":"false"},
+		{ "type": "link", "index": 9, "name": "Link","tableDisplay":"false"},	
+		{ "type": "id", "index": 10, "name": "IMDB_ID", "tableDisplay":"false"},	
+		{ "type": "picture", "index": 18, "name": "poster","tableDisplay":"false"}
+	],
+	"sets": [
+		{ "format": "binary", "start": 19, "end": 21 }
+	],
+    "author": "Santhosh",
+    "description": "New IMDB Movies dataset",
+    "source": "Source"
+}

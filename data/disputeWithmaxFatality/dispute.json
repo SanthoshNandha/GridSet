@@ -1,0 +1,26 @@
+{
+	"file": "../data/disputeWithmaxFatality/DisputeWithFatalities.csv",
+	"name": "Dispute Data",
+	"header": 0,
+	"separator": ",",
+	"skip": 0,
+	"setDependentMeta": "true",
+	"meta": [
+		{ "type": "id", "index": 0, "name": "ID","tableDisplay":"true" },
+		{ "type": "date", "format" : "DD-MM-YYYY", "index": 7, "name": "Start_Date","tableDisplay":"true" },
+		{ "type": "date", "format" : "DD-MM-YYYY", "index": 8, "name": "End_Date","tableDisplay":"true" },
+		{ "type": "integer", "index": 9, "name": "Duration","tableDisplay":"true"},	
+		{ "type": "text", "index": 10, "name": "Max_Hostility_Level","tableDisplay":"true"},
+		{ "type": "integer", "index": 11, "name": "Total_Fatality","tableDisplay":"true"},
+		{ "type": "integer", "index": 13, "name": "Max_Fatality_Level","tableDisplay":"true"}
+	],
+	"dependentMetas": [
+		{"type":"boolean", "index": 0, "name":"SideA"}
+	],
+	"sets": [
+		{ "format": "binary", "start": 14, "end": 405 }
+	],
+    "author": "Author",
+    "description": "Dispute Set",
+    "source": "Source"
+}
