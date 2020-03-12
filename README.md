@@ -28,34 +28,34 @@ elements and associated attributes. Each set representation is composed of glyph
 	
 3. Create the metadata (JSON file) for the CSV inside the same folder
 	### Example JSON format
-	{
-	// Location of the CSV file
-	"file": "../data/acadameyAwards/AcamdameyAwards.csv", 
+	{\
+	// Location of the CSV file\
+	"file": "../data/acadameyAwards/AcamdameyAwards.csv",
 	
-	// Name of the dataset
+	// Name of the dataset\
 	"name": "Acadamey Awards", 
 	
-	// Row number which contains the column headers
+	// Row number which contains the column headers\
 	"header": 0, 
 	
-	// Type of Sperator. only "," supportted currently
+	// Type of Sperator. only "," supportted currently\
 	"separator": ",", 
 	
-	// The row numbers that needs to be skiped
+	// The row numbers that needs to be skiped\
 	"skip": 0, 
 	
-	// Metadata of the element attributes 
-	// "type" -- type of attribute	
-	// "Index" -- column number of attribute 
-	// "name" -- Name of the attribute
-	// "tableDisplay" -- Decides if the attribute needs to be shown in  the detailed view or not
-	"meta": [ 
-		{ "type": "id", "index": 0, "name": "Name","tableDisplay":"true" },
-		{ "type": "integer", "index": 1, "name": "Nominations","tableDisplay":"true"},	
-		{ "type": "text", "index": 2, "name": "Nominated 2017","tableDisplay":"true"}
-	], 
+	//Metadata of the element attributes
+		"type" -- type of attribute	
+		"Index" -- column number of attribute
+		"name" -- Name of the attribute
+		"tableDisplay" -- Decides if the attribute needs to be shown in  the detailed view or not
+			"meta": [ 
+					{ "type": "id", "index": 0, "name": "Name","tableDisplay":"true" },
+					{ "type": "integer", "index": 1, "name": "Nominations","tableDisplay":"true"},	
+					{ "type": "text", "index": 2, "name": "Nominated 2017","tableDisplay":"true"}
+				], 
 	
-	// column range that repersent the sets 
+	// column range that repersent the sets\ 
 	"sets": [
 		{ "format": "binary", "start": 3, "end": 116 }
 	],
