@@ -1,0 +1,22 @@
+{
+	"file": "../data/survey/SurveySets.csv",
+	"name": "Survey Data",
+	"header": 0,
+	"separator": ",",
+	"skip": 0,
+	"meta": [
+		{ "type": "id", "index": 0, "name": "ID" },
+		{ "type": "integer", "index": 82, "name": "GUB" },
+		{ "type": "integer", "index": 83, "name": "FIWIP"},
+		{ "type": "integer", "index": 84, "name": "FUR" },
+		{ "type": "integer", "index": 85, "name": "USE"},
+		{ "type": "integer", "index": 86, "name": "AW" },
+		{ "type": "integer", "index": 87, "name": "PU"}
+	],
+	"sets": [
+		{ "format": "binary", "start": 1, "end": 81 }
+	],
+    "author": "Author",
+    "description": "Survey Set",
+    "source": "Source"
+}

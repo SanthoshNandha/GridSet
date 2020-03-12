@@ -1,0 +1,23 @@
+{
+	"file": "../data/countries/countries_location.csv",
+	"name": "Exports of Products by Countries",
+	"header": 0,
+	"separator": ",",
+	"skip": 0,
+	"meta": [
+		{ "type": "id", "index": 0, "name": "Name" }		
+	],
+	"setMeta":[
+			{"type":"latitude", "rowIndex": 1358, "name":"lat"},
+			{"type":"longitude", "rowIndex": 1359, "name":"lng"}
+	],
+	"sets": [
+		{ "format": "binary", "start": 1, "end": 11}
+	],
+	"elements": [
+		{ "format": "binary", "start": 1, "end": 1354}
+	],
+    "author": "UN Comtrade",
+    "description": "International Trade Statistics on Exports and Imports by Countries for the Year 2010",
+    "source": "http://comtrade.un.org/"
+}

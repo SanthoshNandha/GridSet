@@ -1,0 +1,18 @@
+{
+	"file": "../data/acadameyAwards2/AcamdameyAwards.csv",
+	"name": "Acadamey Awards",
+	"header": 0,
+	"separator": ",",
+	"skip": 0,
+	"meta": [
+		{ "type": "id", "index": 0, "name": "Name","tableDisplay":"true" },
+		{ "type": "integer", "index": 1, "name": "Nominations","tableDisplay":"true"},	
+		{ "type": "text", "index": 2, "name": "Nominated 2017","tableDisplay":"true"}
+	],
+	"sets": [
+		{ "format": "binary", "start": 3, "end": 116 }
+	],
+    "author": "San",
+    "description": "Acadamey Awards",
+    "source": "Source"
+}

@@ -1,0 +1,19 @@
+{
+	"file": "../data/dispute/dispute.csv",
+	"name": "Dispute Data",
+	"header": 0,
+	"separator": ",",
+	"skip": 0,
+	"meta": [
+		{ "type": "id", "index": 0, "name": "ID" },
+		{ "type": "integer", "index": 7, "name": "Duration" },
+		{ "type": "integer", "index": 9, "name": "Fatality"},
+		{ "type": "integer", "index": 10, "name": "MaxHostLev"}	
+	],
+	"sets": [
+		{ "format": "binary", "start": 11, "end": 206 }
+	],
+    "author": "Author",
+    "description": "Dispute Set",
+    "source": "Source"
+}
