@@ -1,4 +1,7 @@
-## Welcome to GitHub Pages
+## GridSet
+
+GridSet is a novel visualization technique for visualizing sets and a large number of their individual
+elements and associated attributes. Each set representation is composed of glyphs, which represent individual elements and their numerous attributes utilizing different visual encodings.
 
 You can use the [editor on GitHub](https://github.com/SanthoshNandha/GridSet/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
