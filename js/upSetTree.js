@@ -2,6 +2,9 @@ function isArray(arr) {
 		    return arr && arr.constructor === Array; 
 		}
 function processSet(sets,layout){
+	console.log("sets", sets);
+	console.log("layout", layout);
+
 	function filterZeroSets(subSet){
 		return subSet.setSize != 0;
 	}
@@ -24,10 +27,10 @@ function processSet(sets,layout){
 		}
 		console.log("/n");*/
 		//console.log("subSets -- " + JSON.stringify(subSets));
-		//sets[i]["subSetTreeSet"] = generateTree(subSets,0,i);
+		sets[i]["subSetTreeSet"] = generateTree(subSets,0,i);
 		
-		/*console.log("sets[i][\"subSetTreeSet\"] --->" );
-		console.log(sets[i]["subSetTreeSet"]);*/
+		console.log("sets[i][\"subSetTreeSet\"] --->" );
+		console.log(sets[i]["subSetTreeSet"]);
 		
 		console.log(subSets);
 		sets[i]["subSetTree"] = generateSizeTree(subSets);
@@ -77,9 +80,9 @@ function sortSubSetGroups1(subSetData){
 }
 function generateTree(parentSet, CombinedSetIndex, subSetIndex){
 	
-	/*console.log(parentSet);
+	console.log(parentSet);
 	console.log(CombinedSetIndex);
-	console.log(subSetIndex);*/
+	console.log(subSetIndex);
 	
 	if(CombinedSetIndex == subSetIndex){
 		parentSet = generateTree(parentSet, CombinedSetIndex+1,subSetIndex);

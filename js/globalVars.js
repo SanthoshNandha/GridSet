@@ -235,9 +235,6 @@ var pixelAttrSizeScale = d3.scalePow()
 .range([(side/2.5),(side+(padding * 1.25 ))]);
 
 
-
-console.log("new scale6");
-
 var pixelDateAttrSizeScale = d3.scaleTime()
 								.range([(side/2),(side+(padding/2))]);
 

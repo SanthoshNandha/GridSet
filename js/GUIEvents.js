@@ -450,8 +450,8 @@ function queryElementByAttribute(){
 		}
 	})
 	.style("fill", function(d){
-		console.log("in fill")
-		console.log(d);
+		// console.log("in fill")
+		// console.log(d);
 		if(!d.isActive)
 			return "gray";
 	})

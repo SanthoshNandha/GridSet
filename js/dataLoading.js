@@ -553,7 +553,7 @@ var updateState = function (parameter) {
 	var t0 = performance.now();
 	levelOneGroups = groupBySet(subSets, 1, "");
 	var t1 = performance.now();
-	console.log("Time taken to generate levelOneGroups " + (t1 - t0) + " milliseconds.");
+	// console.log("Time taken to generate levelOneGroups " + (t1 - t0) + " milliseconds.");
 	
 	levelOneGroups.forEach(function (group) {
         group.nestedGroups = groupByIntersectionSize(group.subSets, 2, group);
@@ -561,7 +561,7 @@ var updateState = function (parameter) {
 	var t0 = performance.now();
 	dataRows = unwrapGroups(levelOneGroups);
 	var t1 = performance.now();
-	console.log("Time taken to unwrapGroups " + (t1 - t0) + " milliseconds.");
+	// console.log("Time taken to unwrapGroups " + (t1 - t0) + " milliseconds.");
 	
 	setDetails = [];
 	for(var i=0; i<dataRows.length;i++){

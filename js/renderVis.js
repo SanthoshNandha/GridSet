@@ -417,8 +417,6 @@ function renderVis(data){
 		.attr("class", "fa fa-window-restore closeSymButton")
 		.attr("aria-hidden","true");
 	
-	console.log("new5");
-	
 	var closeSymButton = d3.selectAll(".setGroup")
 		.append("foreignObject")
 		.attr("x",function(d,i){
