@@ -1,30 +1,46 @@
+<!--
+	# Author: Santhosh Nandhakumar
+	# eMail ID: nsanthosh2409@gmail.com
+	# github: https://github.com/SanthoshNandha
+-->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-    	<meta charset="utf-8">
+
+		<meta charset="utf-8">
+		
+		<!-- JQuery library  -->
     	<script src="../ion.rangeSlider/js/vendor/jquery-1.12.3.min.js"></script>
     	
+		<!-- Bootstrap style sheets  -->
 		<link rel="stylesheet" href="../css/external/bootstrap.css">
 		<link rel="stylesheet" href="../css/external/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="../css/external/d3-context-menu.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
+		<!-- SlickGrid style sheets  -->
 		<link rel="stylesheet" href="../SlickGrid/slick.grid.css" type="text/css"/>
 		<link rel="stylesheet" href="../SlickGrid/slick-default-theme.css" type="text/css"/>
   		<link rel="stylesheet" href="../SlickGrid/css/smoothness/jquery-ui-1.11.3.custom.css" type="text/css"/>
-  		
+		  
+		<!-- ion.rangeSlider style sheets  -->
   		<link rel="stylesheet" href="../ion.rangeSlider/css/normalize.css" type="text/css"/>
   		<link rel="stylesheet" href="../ion.rangeSlider/css/ion.rangeSlider.css" type="text/css"/>
   		<link rel="stylesheet" href="../ion.rangeSlider/css/ion.rangeSlider.skinNice.css" type="text/css"/>
   		<link rel="stylesheet" href="../multiple-select-master/multiple-select.css" type="text/css"/>
-  		
-  		<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
-  		
-  		<link rel="stylesheet" href="../css/main.css">
+		  
+		<!-- Google Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+		  
+		<!-- Styles for GridSet  -->
+		<link rel="stylesheet" href="../css/main.css">
+		  
   	</head>
   	<body>
-  		<!-- <input type="button" id="btnSave2" value="Save PNG 2" /> -->
-  		<div id="container" class="container remove-padding-margin" style="overflow-y:hidden;">
+		<!-- Start of Main container of the application -->
+		  <div id="container" class="container remove-padding-margin" style="overflow-y:hidden;">
+			
+			<!-- Start of the top section of the application -->
   			<div class="new-row upper-band">
   				<div class="new-row new-col">
 					<div class="header-tabber main-header">
@@ -32,314 +48,313 @@
 							<img src="../images/gridsetlogo.png" alt="GridSet" style="width:100px;height:25px;margin-top:-3px;">
 						</div>
 						<div class="pull-right new-col">
-						  <span class="file-link-div">Dataset:</span>
-						  <select name="file" size="1" id="fileLink">
+							<span class="file-link-div">Dataset:</span>
+						  	<select name="file" size="1" id="fileLink">
 						  		<option value="../data/NewMovies/newMovies.json">IMDB + Oscars</option>
-						 	  <option value="../data/NewMovies2/newMovies.json">New Movies2</option>
-						 	  <option value="../data/disputeWithmaxFatality2/dispute1.json">Disputes2</option>
-						 	  <option value="../data/acadameyAwards2/awards.json">Academy Awards2</option>
-						  	  
-						  	  <option value="../data/disputeWithmaxFatality/dispute2.json">Disputes</option>
-						  	  <option value="../data/countries/countries.json">Countries-Exports</option>
-						  	   <option value="../data/disputesAsSets/disputeAsSets.json">Disputes-as-sets</option>
-						  	   <option value="../data/acadameyAwards/awards.json">Academy Awards</option>
-						  	   <option value="../data/NewMoviesSample/newMovies.json">SampleMovies</option>
+						 	  	<option value="../data/NewMovies2/newMovies.json">New Movies2</option>
+						 	  	<option value="../data/disputeWithmaxFatality2/dispute1.json">Disputes2</option>
+						 	  	<option value="../data/acadameyAwards2/awards.json">Academy Awards2</option>
+						  	  	<option value="../data/disputeWithmaxFatality/dispute2.json">Disputes</option>
+						  	  	<option value="../data/countries/countries.json">Countries-Exports</option>
+						  	   	<option value="../data/disputesAsSets/disputeAsSets.json">Disputes-as-sets</option>
+						  	   	<option value="../data/acadameyAwards/awards.json">Academy Awards</option>
+						  	   	<option value="../data/NewMoviesSample/newMovies.json">SampleMovies</option>
 						  	    <option value="../data/NewMoviesSample2/newMovies.json">SampleMovies2</option>
-						  	  <!-- <option value="../data/disputeWithSide/dispute.json">Disputes</option>  -->
-						  	  <!--  <option value="../data/disputeWithDates/dispute.json">Disputes</option> -->
-						  	  <!-- <option value="../data/survey/surveySets.json">Survey Data-Set</option>-->
-						  	  <!-- <option value="../data/movies/movies.json">Movies Data-Set</option>
-							  <option value="../data/simpsons/simpsons.json">Simpsons Data-Set</option>
-							  <option value="../data/fruit/fruit.json">Fruits Data-Set</option>
-							  <option value="../data/mutations/mutations20.json">Mutation Data-Set</option>
-							  <option value="../data/compounds/comp-protein.json">Compound-Protein Data-Set</option>
-							  <option value="../data/socialgraph/socialgraph.json">Social-Graph Data-Set</option>
-							  <option value="../data/countries/countries.json">Countries-Exports</option>
-							  <option value="../data/countries/countries_location.json">Countries-Location</option>
-					          <option value="../data/time/timetest.json">Time-Example</option> -->
-						  </select>
-						  <button class="btn btn-default" id="load">
-  							<i class="fa fa-download" aria-hidden="true"></i>
-  						  </button>
+						  	  	<option value="../data/disputeWithSide/dispute.json">Disputes</option>
+						  	   	<option value="../data/disputeWithDates/dispute.json">Disputes</option>
+						  	  	<option value="../data/survey/surveySets.json">Survey Data-Set</option>
+						  	  	<option value="../data/movies/movies.json">Movies Data-Set</option>
+							  	<option value="../data/simpsons/simpsons.json">Simpsons Data-Set</option>
+								<option value="../data/fruit/fruit.json">Fruits Data-Set</option>
+								<option value="../data/mutations/mutations20.json">Mutation Data-Set</option>
+								<option value="../data/compounds/comp-protein.json">Compound-Protein Data-Set</option>
+								<option value="../data/socialgraph/socialgraph.json">Social-Graph Data-Set</option>
+								<option value="../data/countries/countries.json">Countries-Exports</option>
+								<option value="../data/countries/countries_location.json">Countries-Location</option>
+								<option value="../data/time/timetest.json">Time-Example</option>
+						  	</select>
+						  	<button class="btn btn-default" id="load">
+  								<i class="fa fa-download" aria-hidden="true"></i>
+  						  	</button>
 						</div>
 					</div>
   				</div>
-  			</div>
+			</div>
+			<!-- End of the top section of the application -->  
+
+			<!-- Start of the Bottom section of the application -->
   			<div class="new-row lower-band">
-					<div class="ui-layout-center">
-						<div class="new-col new-row pull-left middleColumn" id="mainView">
-  							<div class="new-row new-col mainView">
+
+				<!-- Start of the Center part of lower section of the application -->
+				<div class="ui-layout-center">
+					<div class="new-col new-row pull-left middleColumn" id="mainView">
+  						<div class="new-row new-col mainView">
   							<div class="legend-div disable-select">
-  									<div class="eachLegend legend-shape pull-left">
-										<span>Element Shape</span>
-										<br>
-										<select type="select" class="legend-select" id="shapeShape">
-											<option value="0">Square</option>
-											<option value="1">Circle</option>
-											<!-- <option value="2">Triangle</option>
-											<option value="3">Diamond</option>
-											<option value="4">Inverted Triangle</option> -->
-										</select>
-									</div>
-  									<div class="eachLegend legend-size pull-left">
-										<span>Element Size</span>
-										<br>
-										<select type="select" class="legend-select" id="shapeSize">
-										</select>
-										<br>
-										<div class="legendSvgDiv elementSize-svg">
-										</div>
-									</div>
-									<div class="eachLegend legend-size pull-left">
-										<span>Graph</span>
-										<br>
-										<select type="select" class="legend-select" id="shapeBar">
-										</select>
-										<br>
-										<div class="legendSvgDiv elementBar-svg">
-										</div>
-									</div>
-									<div class="eachLegend legend-order pull-left">
-										<span>Element Order</span>
-										<br>
-										<select type="select" class="legend-select" id="shapeOrder">
-										</select>
-										<br>
-										<div class="legendSvgDiv elementOrder-svg">
-										</div>
-									</div>
-									<div class="eachLegend legend-order pull-left">
-										<span>Sub-Division Order</span>
-										<br>
-										<select type="select" class="legend-select" id="subDivOrder">
-											<option>Size</option>
-											<option>Degree</option>
-											<option>Sets</option>
-										</select>
-										<br>
-										<div class="legendSvgDiv elementOrder-svg">
-										</div>
-									</div>
-									<div class="eachLegend legend-color pull-left">
-										<span style="margin-left:10px;">Element Color</span>
-										<br>
-										<select type="select" class="legend-select" id="shapeColor" style="margin-left:10px;">
-										</select>
-										<br>
-										<div class="legendSvgDiv elementColor-svg">
-										</div>
-										<div class="legendSvgDiv elementCategoryColor-svg">
-										</div>
-									</div>
-									<div class="eachLegend legend-picture pull-left">
-										<span style="margin-left:10px;">Element Picture</span>
-										<br>
-										<select type="select" class="legend-select" id="shapePicture" style="margin-left:10px;">
-										</select>
-									</div>
-									
-									<div class="legend-subGroupColor pull-left">
-										<span style="margin-left:10px;">Sub-group Color</span>
-										<br>
-										<select type="select" class="legend-select" id="subColor" style="margin-left:10px;">
-											 <!-- <option value="Deviation">Deviation</option> -->
-										</select>
-										<br>
-										<div class="legendSvgDiv subGroupColor-svg">
-										</div>
-									</div>
-									<div class="eachLegend legend-setSpecific pull-left">
-										<span id="setSpecificBoolean" style="margin-left:10px;"></span>
-										<div class="legendSvgDiv setSpecificBoolean-svg">
-										</div>
-									</div>
+  								<div class="eachLegend legend-shape pull-left">
+									<span>Element Shape</span>
+									<br>
+									<select type="select" class="legend-select" id="shapeShape">
+										<option value="0">Square</option>
+										<option value="1">Circle</option>
+									</select>
+								</div>
+								<div class="eachLegend legend-size pull-left">
+									<span>Element Size</span>
+									<br>
+									<select type="select" class="legend-select" id="shapeSize"></select>
+									<br>
+									<div class="legendSvgDiv elementSize-svg"></div>
+								</div>
+								<div class="eachLegend legend-size pull-left">
+									<span>Graph</span>
+									<br>
+									<select type="select" class="legend-select" id="shapeBar"></select>
+									<br>
+									<div class="legendSvgDiv elementBar-svg"></div>
+								</div>
+								<div class="eachLegend legend-order pull-left">
+									<span>Element Order</span>
+									<br>
+									<select type="select" class="legend-select" id="shapeOrder"></select>
+									<br>
+									<div class="legendSvgDiv elementOrder-svg"></div>
+								</div>
+								<div class="eachLegend legend-order pull-left">
+									<span>Sub-Division Order</span>
+									<br>
+									<select type="select" class="legend-select" id="subDivOrder">
+										<option>Size</option>
+										<option>Degree</option>
+										<option>Sets</option>
+									</select>
+									<br>
+									<div class="legendSvgDiv elementOrder-svg"></div>
+								</div>
+								<div class="eachLegend legend-color pull-left">
+									<span style="margin-left:10px;">Element Color</span>
+									<br>
+									<select type="select" class="legend-select" id="shapeColor" style="margin-left:10px;"></select>
+									<br>
+									<div class="legendSvgDiv elementColor-svg"></div>
+									<div class="legendSvgDiv elementCategoryColor-svg"></div>
+								</div>
+								<div class="eachLegend legend-picture pull-left">
+									<span style="margin-left:10px;">Element Picture</span>
+									<br>
+									<select type="select" class="legend-select" id="shapePicture" style="margin-left:10px;"></select>
+								</div>									
+								<div class="legend-subGroupColor pull-left">
+									<span style="margin-left:10px;">Sub-group Color</span>
+									<br>
+									<select type="select" class="legend-select" id="subColor" style="margin-left:10px;"></select>
+									<br>
+									<div class="legendSvgDiv subGroupColor-svg"></div>
+								</div>
+								<div class="eachLegend legend-setSpecific pull-left">
+									<span id="setSpecificBoolean" style="margin-left:10px;"></span>
+									<div class="legendSvgDiv setSpecificBoolean-svg"></div>
+								</div>
 							</div> 
-  								<div id="chart">
-  									<div id="svgDiv">
-  									</div>
-  								</div>
-  							</div>
-  						</div>
-					</div>
-					<div class="ui-layout-east">
-						<div class="new-col new-row pull-left rightColumn" id="rightView">
-							<div class="set-list-section disable-select">
-								<div class="header-tab rightcol-header">
-  									Set View
-  									<span class="pull-right setCount set-counter">
-										0
-									</span>
-									<span class="pull-right setCount">
-										:
-									</span>
-									<span class="pull-right setCount">
-										Total
-									</span>
-  								</div>
-								<div id="setView" class="disable-select">
+							<div id="chart">
+								<div id="svgDiv">
 								</div>
 							</div>
-  							<div class="new-row dataView-section disable-select">
-  								<div class="col-12">
-  									<div class="header-tab element-header rightcol-header">
-  										<div>
-  											<div class="pull-left">Detailed View</div>
-  											<div class="pull-right" id="eleCount" style="margin-right:20px">0</div>
-	  										<div class="pull-right" style="margin-right:10px">All Count:</div>
-  										</div>
-  										<br>
-										<ul class="nav nav-tabs" style="line-height: 0px;">
-											<!-- <li class="pull-left" style="padding-top: 7px;">
-												Detailed View
-											</li>   -->
-											<li class="pull-right">
-												<a data-toggle="tab" href="#listViewDiv">List</a>
-											</li>											
-  											<li class="pull-right">
-												<a  data-toggle="tab" href="#selectedElements">SELECTED</a>
-											</li>
-											<li class="active pull-right">
-												<a data-toggle="tab" href="#allElementDiv">ALL</a>
-											</li>
-										</ul>  										
-  									</div>  									
-  									<div class="tabContent-div">
-										<div class="tab-content detailed-view-tab">
-											<div id="allElementDiv" class="tab-pane active">
-		  										<div id="dataViewDiv">
-		  										</div>
-	  										</div>
-	  										<div id="selectedElements" class="tab-pane">
-	  											<div id="selectedDataViewDiv">
-	  											</div>
-	  										</div>
-	  										<div id="listViewDiv" class="tab-pane">
-	  											<div id="listDataViewDiv">
-	  											</div>
-	  										</div>
-										</div>
-									</div>
-  								</div>
-  							</div>
   						</div>
-					</div>
-					<div class="ui-layout-west">
-						<!-- <div class="new-col new-row pull-left leftColumn" id="dashBoard">
-  							<div class="new-row groupBy-section">
-  								<div class="new-row new-col">
-  									<div >
-  										<input type="checkbox" id="showSimilarity">Show Similarity
-									</div>
-  									<div>GroupBy</div> 
+  					</div>
+				</div>
+				<!-- End of the Center part of lower section of the application -->
+
+				<!-- Start of the right part of lower section of the application -->
+				<div class="ui-layout-east">
+					<div class="new-col new-row pull-left rightColumn" id="rightView">
+						<div class="set-list-section disable-select">
+							<div class="header-tab rightcol-header">
+  								Set View
+  								<span class="pull-right setCount set-counter">
+									0
+								</span>
+								<span class="pull-right setCount">
+									:
+								</span>
+								<span class="pull-right setCount">
+									Total
+								</span>
+  							</div>
+							<div id="setView" class="disable-select">
+							</div>
+						</div>
+  						<div class="new-row dataView-section disable-select">
+  							<div class="col-12">
+  								<div class="header-tab element-header rightcol-header">
   									<div>
-										<input class="groupByRadio" type="radio" name="optradio" value="sets" checked="checked">Intersection
-										<input class="groupByRadio" type="radio" name="optradio" value="degree">Degree
-										<input class="groupByNone" type="radio" name="optradio" value="degree">None
-									</div>
-  								</div>
-  							</div> -->
-  							<div class="new-row new-col left-col disable-select">
-  								<div class="new-row new-col query-section">
-  									<div class="header-tab intersection-header">
-  										Query Intersections
-  									</div>
-  									<div class="new-row degree-query-section">
-										<div class="mini-header-tab by-degree-header">
-											By Degree
-										</div>
-										<div class="sliderDiv degreeSliderDiv">
-											<input type="text" id="degreeSlider" name="degreeSlider_name" value="" />
-										</div>	
-  									</div>
-  									<div class="new-row set-query-section">
-  										<div class="mini-header-tab by-set-header">
-											By Sets
-											<span class="pull-right usedCount used-counter">
-												0
-											</span>
-											<span class="pull-right usedCount">
-												:
-											</span>
-											<span class="pull-right usedCount">
-												Count
-											</span>
-										</div>
- 										<div class="pull-left set-query-header">
-											<div class="pull-left" style="width:70%; height:100%;">Sets</div>
-											<div class="pull-right" style="width:30%; height:100%;">
-												<div class="pull-right set-query-heading">
-													NOT
-												</div>
-												<div class="pull-right set-query-heading">
-													OR
-												</div>
-												<div class="pull-right set-query-heading">
-													AND
-												</div>
-											</div>
-											
-										</div>
-										<div class="pull-left set-query-header" style="width:2%;"></div>
-  										<div class="new-col new-row" id="setQueryView">
-  										</div>
-  									</div>
-  									<div class="new-row query-section-button-div">
-  										<button class="btn btn-default query-section-button setQueryClear" id="setQueryClear">
-  											<i class="">Clear Links</i>
-  										</button>
-  									</div>
-  									<div class="header-tab element-header">
-  										Query Elements
-  									</div>
-  									<div class="new-row attribute-query-section">
-  										<div class="attributeQueryView new-row new-col" id="attributeQueryView">
-  										</div>
-  									</div>
-  									<div class="new-row search-attribute-section element-query-section" id="search-attribute-section">
-  									</div>
-  									<div class="new-row category-attribute-section element-query-section">
-  										<div class="new-row" id="category-attribute-accordion" role="tablist" aria-multiselectable="true"> 										
-  										</div>
+  										<div class="pull-left">Detailed View</div>
+  										<div class="pull-right" id="eleCount" style="margin-right:20px">0</div>
+	  									<div class="pull-right" style="margin-right:10px">All Count:</div>
   									</div>
   									<br>
-  									<div class="element-query-button-div">
-  										<button class="btn btn-default attr-set-button createAttrSet" id="createAttrSet">
-  											<!-- <i class="fa fa-th-large" aria-hidden="true"></i> -->
-  											 <i class="">Create Set</i>
-  										</button>
-  										<button class="btn btn-default attr-set-button clearAttrSet" id="clearAttrSet">
-  											<!-- <i class="fa fa-th-large" aria-hidden="true"></i> -->
-  											 <i class="">Clear</i>
-  										</button>
-  									</div>
-  							</div>
+									<ul class="nav nav-tabs" style="line-height: 0px;">
+										<li class="pull-right">
+											<a data-toggle="tab" href="#listViewDiv">List</a>
+										</li>											
+										<li class="pull-right">
+											<a  data-toggle="tab" href="#selectedElements">SELECTED</a>
+										</li>
+										<li class="active pull-right">
+											<a data-toggle="tab" href="#allElementDiv">ALL</a>
+										</li>
+									</ul>  										
+  								</div>  									
+								<div class="tabContent-div">
+									<div class="tab-content detailed-view-tab">
+										<div id="allElementDiv" class="tab-pane active">
+											<div id="dataViewDiv"></div>
+										</div>
+										<div id="selectedElements" class="tab-pane">
+											<div id="selectedDataViewDiv"></div>
+										</div>
+										<div id="listViewDiv" class="tab-pane">
+											<div id="listDataViewDiv"></div>
+										</div>
+									</div>
+								</div>
   							</div>
   						</div>
+  					</div>
+				</div>
+				<!-- End of the right part of lower section of the application -->
+
+				<!-- Start of the Left part of lower section of the application -->
+				<div class="ui-layout-west">
+					<!-- 
+					<div class="new-col new-row pull-left leftColumn" id="dashBoard">
+						<div class="new-row groupBy-section">
+							<div class="new-row new-col">
+								<div >
+									<input type="checkbox" id="showSimilarity">Show Similarity
+								</div>
+								<div>GroupBy</div> 
+								<div>
+									<input class="groupByRadio" type="radio" name="optradio" value="sets" checked="checked">Intersection
+									<input class="groupByRadio" type="radio" name="optradio" value="degree">Degree
+									<input class="groupByNone" type="radio" name="optradio" value="degree">None
+								</div>
+							</div>
+						</div>
 					</div>
-  			</div>
-  		
+					-->
+  					<div class="new-row new-col left-col disable-select">
+						<div class="new-row new-col query-section">
+							<div class="header-tab intersection-header">
+								Query Intersections
+							</div>
+							<div class="new-row degree-query-section">
+								<div class="mini-header-tab by-degree-header">
+									By Degree
+								</div>
+								<div class="sliderDiv degreeSliderDiv">
+									<input type="text" id="degreeSlider" name="degreeSlider_name" value="" />
+								</div>	
+							</div>
+							<div class="new-row set-query-section">
+								<div class="mini-header-tab by-set-header">
+									By Sets
+									<span class="pull-right usedCount used-counter">
+										0
+									</span>
+									<span class="pull-right usedCount">
+										:
+									</span>
+									<span class="pull-right usedCount">
+										Count
+									</span>
+								</div>
+								<div class="pull-left set-query-header">
+									<div class="pull-left" style="width:70%; height:100%;">Sets</div>
+									<div class="pull-right" style="width:30%; height:100%;">
+										<div class="pull-right set-query-heading">
+											NOT
+										</div>
+										<div class="pull-right set-query-heading">
+											OR
+										</div>
+										<div class="pull-right set-query-heading">
+											AND
+										</div>
+									</div>	
+								</div>
+								<div class="pull-left set-query-header" style="width:2%;"></div>
+								<div class="new-col new-row" id="setQueryView">
+								</div>
+							</div>
+							<div class="new-row query-section-button-div">
+								<button class="btn btn-default query-section-button setQueryClear" id="setQueryClear">
+									<i class="">Clear Links</i>
+								</button>
+							</div>
+							<div class="header-tab element-header">
+								Query Elements
+							</div>
+							<div class="new-row attribute-query-section">
+								<div class="attributeQueryView new-row new-col" id="attributeQueryView">
+								</div>
+							</div>
+							<div class="new-row search-attribute-section element-query-section" id="search-attribute-section">
+							</div>
+							<div class="new-row category-attribute-section element-query-section">
+								<div class="new-row" id="category-attribute-accordion" role="tablist" aria-multiselectable="true"> 										
+								</div>
+							</div>
+  							<br>
+							<div class="element-query-button-div">
+								<button class="btn btn-default attr-set-button createAttrSet" id="createAttrSet">
+									<i class="">Create Set</i>
+								</button>
+								<button class="btn btn-default attr-set-button clearAttrSet" id="clearAttrSet">
+									<i class="">Clear</i>
+								</button>
+							</div>
+  						</div>
+  					</div>
+  				</div>
+				<!-- End of the Left part of lower section of the application -->
+			</div>
+			<!-- End of the Bottom section of the application -->
+		</div>
+		<!-- End of Main container of the application -->
+		
+		<!--  Jquery libraries -->
 		<script src="../SlickGrid/lib/jquery-ui-1.11.3.js"></script>
 		<script src="../SlickGrid/lib/jquery.event.drag-2.3.0.js"></script>
 		<script src="../SlickGrid/lib/jquery.event.drop-2.3.0.js"></script>
 		
+		<!--  D3.js JS libraries for the visualizations-->
 		<script src="https://d3js.org/d3.v4.js"></script> 
 	    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	    		
+		<!--  jsclipper JS libraries for the generation of links-->
 		<script src="http://jsclipper.sourceforge.net/6.1.3.1/clipper.js"></script>
 	  	
+		<!--  SlickGrid JS libraries for the right view-->
 		<script src="../SlickGrid/slick.core.js"></script>
 		<script src="../SlickGrid/slick.grid.js"></script>
 		<script src="../SlickGrid/slick.dataview.js"></script>
 		
+		<!--  Layout JS libraries for the lower part of the application view-->
 		<script src="../layout-master/jquery.layout.js"></script>
 		
+		<!--  ion.rangeSlider for the sliders in the attribute filters-->
 		<script src="../ion.rangeSlider/js/ion-rangeSlider/ion.rangeSlider.js"></script>
 		<script src="../multiple-select-master/multiple-select.js"></script>
 		
+		<!-- listjs for generating the set view in the right view -->
 		<script src="http://listjs.com/assets/javascripts/list.min.js"></script>
+
+
+		<!-- JS file to generate the GridTree Map from tree structure -->
 		<script src="../GridTreeMap/GridTreeMap.js"></script>	
 		
-	    <script src="../js/html2canvas.min.js"></script>
+		<!-- JS files for the application -->
+		<script src="../js/html2canvas.min.js"></script>
 	    <script src="../js/external/bootstrap.js"></script> 
 	    <script src="../js/external/moment.js"></script>
 	   	<script src="../js/external/math.min.js"></script>
@@ -368,4 +383,6 @@
 		<script src="../js/pixelColorLegend.js"></script>
 		<script src="../js/setSpecificAttr.js"></script>
 		<script src="../js/attr.js"></script>
-  	</body>
+		
+	</body>
+</html>

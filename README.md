@@ -37,7 +37,7 @@ A demo instance of GridSet is avialable at [https://santhoshnandha.github.io/Gri
 	```
 	{	
 		// Location of the CSV file
-		"file": "../data/datasetName/dataset.csv",
+		"file": "../data/datasetName/datasetname.csv",
 	
 		// Name of the dataset	
 		"name": "Acadamey Awards", 
@@ -57,10 +57,10 @@ A demo instance of GridSet is avialable at [https://santhoshnandha.github.io/Gri
 		"name" -- Name of the attribute
 		"tableDisplay" -- Decides if the attribute needs to be shown in  the detailed view or not
 		"meta": [ 
-					{ "type": "id", "index": 0, "name": "Name","tableDisplay":"true" },
-					{ "type": "integer", "index": 1, "name": "Nominations","tableDisplay":"true"},	
-					{ "type": "text", "index": 2, "name": "Nominated 2017","tableDisplay":"true"}
-				], 
+				{ "type": "id", "index": 0, "name": "Name","tableDisplay":"true" },
+				{ "type": "integer", "index": 1, "name": "Nominations","tableDisplay":"true"},	
+				{ "type": "text", "index": 2, "name": "Nominated 2017","tableDisplay":"true"}
+		], 
 	
 		// column range that repersent the sets\ 
 		"sets": [
@@ -76,7 +76,7 @@ A demo instance of GridSet is avialable at [https://santhoshnandha.github.io/Gri
 	### Example
 	```
 		<select name="file" id="fileLink">
-			<option value="../data/NewMovies/newMovies.json">IMDB + Oscars </option>
+			<option value="/data/datasetName/datasetname.json">Dataset Name </option>
 		</select>
 	```
 1. Restart the python server and go to [localhost:8000/web](http://localhost:8000/web). The new dataset will be visible in the dropdown box.
