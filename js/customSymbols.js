@@ -1,3 +1,8 @@
+/* 
+	* Author: Santhosh Nandhakumar
+	* eMail ID: nsanthosh2409@gmail.com
+ */
+
 var triangleSymbol = {
 		draw: function(context, size) {
 		    var w = Math.sqrt(size),

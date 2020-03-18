@@ -1,3 +1,8 @@
+/* 
+	* Author: Santhosh Nandhakumar
+	* eMail ID: nsanthosh2409@gmail.com
+ */
+
 function buildAttrSets(){
 	setsAttribute = attributes.filter(function (d) {
         return (d.name != "Sets" && d.name != "Set Count")

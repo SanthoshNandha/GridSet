@@ -79,7 +79,7 @@ html, body {
 	height: 6%;
 }
 .set-query-section{
-sssssss	overflow-y: hidden;
+    overflow-y: hidden;
 }
 .attribute-query-section{
     overflow-y: auto;
@@ -163,7 +163,7 @@ sssssss	overflow-y: hidden;
 	height:100%;
 }
 #setView{
-	//height:490px;
+	/* height:490px; */
 	height:96%;
 }
 #setViewScale{
@@ -240,7 +240,7 @@ sssssss	overflow-y: hidden;
 }
 .bar-div{
 	position: relative;
-    //top: 10px;
+    /* top: 10px; */
     left: 100px;
     height: 10px;
     border: 3px solid #73AD21;

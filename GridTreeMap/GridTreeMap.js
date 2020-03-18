@@ -1,111 +1,116 @@
+/* 
+	* Author: Santhosh Nandhakumar
+	* eMail ID: nsanthosh2409@gmail.com
+ */
+
 var gridTreeMap = {};
 (function() {
-	 "use strict";
-	 gridTreeMap.generate = function(){
+	"use strict";
+	gridTreeMap.generate = function(){
 		 
-		 var RIGHT = true;
-		 var LEFT = false;
+		var RIGHT = true;
+		var LEFT = false;
+	
+		var DOWN = true;
+		var UP = false;
 		
-		 var DOWN = true;
-		 var UP = false;
+		var SPLIT = true;
+		var SLICE = false;
+		
+		var layout = SPLIT;
+		
+		/*var splitDirection = RIGHT;
+		var sliceDirection = DOWN;*/
+		
+		var numRows;
+		var numCols;
+		var idGrid =[];
+		var nextList;
+		var idList = [];
+		var treeName;
 		 
-		 var SPLIT = true;
-		 var SLICE = false;
+		function point(x,y){
+			var pt = {};
+			pt["x"] = x;
+			pt["y"] = y;			 
+			return pt;
+		}
 		 
-		 var layout = SPLIT;
-		 
-		 /*var splitDirection = RIGHT;
-		 var sliceDirection = DOWN;*/
-		 
-		 var numRows;
-		 var numCols;
-		 var idGrid =[];
-		 var nextList;
-		 var idList = [];
-		 var treeName;
-		 
-		 function point(x,y){
-			 var pt = {};
-			 pt["x"] = x;
-			 pt["y"] = y;			 
-			 return pt;
-		 }
-		 
-		 function draw(data,tree){
-			 
-			 treeName = tree;
-			 var area = sumMultidimensionalArray(data);
-			 numRows  = Math.ceil(Math.sqrt(area));
-			 
-			/* //To manintain the number of rows always a odd number
-			 if(numRows%2 != 1){
-				 numRows = numRows - 1;
-			 }*/
-			 numCols  = Math.ceil(area / numRows);
-			 
-			 data["rows"] = numRows;
-			 data["cols"] = numCols;
+		function draw(data,tree){
+			
+			treeName = tree;
+			var area = sumMultidimensionalArray(data);
+			numRows  = Math.ceil(Math.sqrt(area));
+			
+		/* //To manintain the number of rows always a odd number
+			if(numRows%2 != 1){
+				numRows = numRows - 1;
+			}*/
+			numCols  = Math.ceil(area / numRows);
+			
+			data["rows"] = numRows;
+			data["cols"] = numCols;
 
-			 for (var i=0; i<numRows; i++) {
-				 idGrid[i] = [];
-				 for (var j=0; j<numCols; j++) {
-					 idGrid[i][j] = { "parent" : "0"};
-				 }
-			 }		
-			 
-			 gridTreeMapMultiDimensional("0", data, layout);
-			 return [numRows,numCols];
-		 }
+			for (var i=0; i<numRows; i++) {
+				idGrid[i] = [];
+				for (var j=0; j<numCols; j++) {
+					idGrid[i][j] = { "parent" : "0"};
+				}
+			}		
+			
+			gridTreeMapMultiDimensional("0", data, layout);
+			return [numRows,numCols];
+		}
 		 
-		 function gridTreeMapMultiDimensional(parent, data, fillLayout){	
-			 var layout = fillLayout;
-			 var mergeddata = [];
-			 if(isArray(data[0])) { // if we've got more dimensions of depth
-				for(var i=0; i<data.length; i++) {
-				    mergeddata[i] = sumMultidimensionalArray(data[i]);
-				}
-			 	
-              gridTreeSingleDimensional(parent,mergeddata,layout,false);
-              
-               layout = !layout
-              
-			 for(var i=0; i<data.length;i++){
-				   gridTreeMapMultiDimensional(parent+""+i,data[i],layout);
-			   } 
-			 }
-			 else{
-				 gridTreeSingleDimensional(parent,data,layout,true);
-			 }
-			 return idList;
-		 }
+		function gridTreeMapMultiDimensional(parent, data, fillLayout){	
+			var layout = fillLayout;
+			var mergeddata = [];
+			if(isArray(data[0])) { // if we've got more dimensions of depth
+			for(var i=0; i<data.length; i++) {
+				mergeddata[i] = sumMultidimensionalArray(data[i]);
+			}
+			
+			gridTreeSingleDimensional(parent,mergeddata,layout,false);
+			
+			layout = !layout
+			
+			for(var i=0; i<data.length;i++){
+				gridTreeMapMultiDimensional(parent+""+i,data[i],layout);
+			} 
+			}
+			else{
+				gridTreeSingleDimensional(parent,data,layout,true);
+			}
+			return idList;
+		}
 		 
-		 function gridTreeSingleDimensional(parent,data, layout,isLeaf) {
-			 var pts = [];
-			 var startpt = {};
-			 var i;	
-			 
-			 for(i=0; i<data.length; i++) {
-				startpt = findStartingPoint(parent,layout);
-				if(isLeaf){
-					pts = fill(startpt, parent, i, Number(data[i].setSize),layout);	
+		function gridTreeSingleDimensional(parent,data, layout,isLeaf) {
+			var pts = [];
+			var startpt = {};
+			var i;	
+			
+			for(i=0; i<data.length; i++) {
+			startpt = findStartingPoint(parent,layout);
+			if(isLeaf){
+				pts = fill(startpt, parent, i, Number(data[i].setSize),layout);	
+			}
+			else{
+				pts = fill(startpt, parent, i, data[i],layout);	
+			}
+			if(isLeaf){
+				if(treeName == "subsetTree"){
+					data[i]["coOrdinates"] = pts;
 				}
-				else{
-					pts = fill(startpt, parent, i, data[i],layout);	
+				if(treeName == "degreeTree"){
+					data[i]["degreeCoOrdinates"] = pts;
 				}
-			    if(isLeaf){
-			    	if(treeName == "subsetTree"){
-			    		data[i]["coOrdinates"] = pts;
-			    	}
-			    	if(treeName == "degreeTree"){
-			    		data[i]["degreeCoOrdinates"] = pts;
-			    	}
-			    	if(treeName == "setTree"){
-			    		data[i]["setcoOrdinates"] = pts;
-			    	}
-			    	idList.push(pts);
-			    }
-			 }
-		 }
+				if(treeName == "setTree"){
+					data[i]["setcoOrdinates"] = pts;
+				}
+				idList.push(pts);
+			}
+			}
+		}
 		
 		function findStartingPoint(parent,layout){
 			var direction = true;
@@ -161,6 +166,7 @@ var gridTreeMap = {};
 			}
 			return startPt;			
 		}
+		
 		function fill(startpt, parent, id, size,layout) {
 			var row, col;
 			var pt = {};

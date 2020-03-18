@@ -24,7 +24,8 @@ function processDataSet(dataSetDescription) {
 
 function setupPanels(){
 	
-	degreeSlider = $("#degreeSlider").ionRangeSlider({
+    // Initialize the degree slider -- ionRangeSlider
+    degreeSlider = $("#degreeSlider").ionRangeSlider({
 		type: "double",
 		grid:false,
 	    min: 1,
@@ -40,13 +41,15 @@ function setupPanels(){
 	   
 	}).data("ionRangeSlider");
 	
-	categoryAttribute = attributes.filter(function (d) {
+    // Filter and categorize the attributes of the elements
+    categoryAttribute = attributes.filter(function (d) {
         return (d.name != "Sets" && d.name != "Set Count" && d.name != "Name" && d.name != "SetNames" && (d.type == "text"));
 	});
 	
 	dateAttributes =  attributes.filter(function (d) {
         return (d.name != "Sets" && d.name != "Set Count" && d.name != "Name" && d.name != "SetNames" && (d.type == "date"));
-	});
+    });
+    
 	pictureAttributes = attributes.filter(function (d) {
         return (d.name != "Sets" && d.name != "Set Count" && d.name != "Name" && d.name != "SetNames" && (d.type == "picture"));
 	});
@@ -62,21 +65,21 @@ function setupPanels(){
 	linkAttribute = attributes.filter(function (d) {
         return (d.name != "Sets" && d.name != "Set Count" && d.name != "Name" && d.name != "SetNames" && (d.type=="link"));
 	})[0];
-	
-	 renderCategoryFilter(categoryAttribute);
-	 addCategoryColorLegend();
-	 addPictureAttributes();
-	 renderNumericFilter(numericAttributes,categoryAttribute,dateAttributes);
-	 renderSetView(sets);
-	 generateDataView();
-	 renderDetailedListView();
-	 renderSearchFilter();
-	 addSizeLegend();
-	 addPixelColorLegend();
-	 addSubGroupColorLegend();
-	 addOrderLegend();
-	 renderOrderPixel();
-	 addSetSpecificLegend();
+    
+    renderCategoryFilter(categoryAttribute);
+    addCategoryColorLegend();
+    addPictureAttributes();
+    renderNumericFilter(numericAttributes,categoryAttribute,dateAttributes);
+    renderSetView(sets);
+    generateDataView();
+    renderDetailedListView();
+    renderSearchFilter();
+    addSizeLegend();
+    addPixelColorLegend();
+    addSubGroupColorLegend();
+    addOrderLegend();
+    renderOrderPixel();
+    addSetSpecificLegend(); 
 }
 
 function run() {
@@ -99,6 +102,7 @@ function run() {
 	renderVis(data);
 }
 
+// Parsing the Set datatype using UpSet code
 function parseDataSet(data, dataSetDescription) {
     // the raw set arrays
     rawSets = [];
@@ -189,16 +193,7 @@ function parseDataSet(data, dataSetDescription) {
         }
     }
     
-   /* console.log("rows -- > ");
-    console.log(rows);
-    console.log("allItems -- > ");
-    console.log(allItems);
-    console.log("rawSets -- > ");
-    console.log(rawSets);
-    console.log("setNames -- > ");
-    console.log(setNames);*/
-    
- setAttributes.length = 0;
+    setAttributes.length = 0;
     
     if(dataSetDescription.setMeta){
     	for(var i=0; i < dataSetDescription.setMeta.length; i++){
@@ -216,7 +211,6 @@ function parseDataSet(data, dataSetDescription) {
         }
     }
     
-    
     setSpecificAttributes.length = 0;
     if(dataSetDescription.setDependentMeta){
     	for(var i=0; i<dataSetDescription.dependentMetas.length; i++){
@@ -230,8 +224,6 @@ function parseDataSet(data, dataSetDescription) {
     		setSpecificAttributes.push(setSpecificAttr);
     	}
     }
-    
-    //console.log(setSpecificAttributes);
 
     // initialize sets and set IDs 
     for (var i = 0; i < rawSets.length; i++) {
@@ -273,7 +265,6 @@ function parseDataSet(data, dataSetDescription) {
                sort: 1
            }); 
        }
-       
     }
 
     // add implicit attributes
@@ -298,8 +289,6 @@ function parseDataSet(data, dataSetDescription) {
         setCountAttribute.values[d] = setCount;
     }
     attributes.push(setCountAttribute);
-    
-//    console.log(setCountAttribute);
 
     var setsAttribute = {
         name: 'Sets',
@@ -418,7 +407,6 @@ function parseDataSet(data, dataSetDescription) {
 
 function createSignature(listOfUsedSets, listOfSets) {
     return listOfUsedSets.map(function (d) {
-    	//console.log(listOfSets.indexOf(d));
         return (listOfSets.indexOf(d) > -1) ? 1 : 0
     }).join("")
 }

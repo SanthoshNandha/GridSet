@@ -1,100 +1,89 @@
+/* 
+	* Author: Santhosh Nandhakumar
+	* eMail ID: nsanthosh2409@gmail.com
+ */
+
+// Options for configuring jQuery UI Layout Plug-in
 var layoutOptions = {
 		east:{
 			applyDefaultStyles: true,
-			size:	300,
-			closable:		true,
-			resizable:		true,
-			spacing_open:    3,
-			spacing_closed: 3,
+			size: 300,
+			closable: true,
+			resizable:	true,
+			spacing_open:	3,
+			spacing_closed:	3,
 			onresize :function(){
 				$(".barDivContainer").width($(".setViewPanelRow").width() - ($(".setLabelDivConatiner").width() + 30))
 			}
 		},
 		west:{
-			applyDefaultStyles: true,
+			applyDefaultStyles:	true,
 			size:	200,
-			closable:		true,
-			resizable:		false,
-			spacing_open:    3,
-			spacing_closed: 3,
+			closable:	true,
+			resizable:	false,
+			spacing_open:	3,
+			spacing_closed:	3,
 		}
 }
 
+// Steps when the document gets loaded in the browser
 $(document).ready(function(){
+
+	// jQuery UI Layout getting initialized
 	myLayout = $(".lower-band").layout(layoutOptions);
-	
-	myLayout.panes.west.css({ padding: '0px',
+	myLayout.panes.west.css({ 	padding: '0px',
 	    						border: '0px',
 							});
-	
-	myLayout.panes.east.css({ padding: '0px',
+	myLayout.panes.east.css({ 	padding: '0px',
 								overflow: 'hidden',
 							});
 	
+	// Initializing bootstrap tooltip							
     $('[data-toggle="tooltip"]').tooltip();
-    
-    $(window).resize(function(){
+		
+	// Resizing the main SVG container whenever the browser is resized
+	$(window).resize(function(){
         $(".main-svg").attr("width",($(".lower-band").width()));
         $(".main-svg").attr("height",($(".lower-band").height()));
     });
     
-    $(".lower-band").hide();
-    
-    $("#btnSave2").click(function() {
-    	
-    	html2canvas(document.querySelector(".container")).then(canvas => {
-    		
-    		saveAs(canvas.toDataURL(), 'canvas.png');
-    	    //document.body.appendChild(canvas)
-    	});
-    	
-       /* html2canvas($("#container").get(0), {
-          onrendered: function(canvas) {
-            saveAs(canvas.toDataURL(), 'canvas.png');
-          }
-        });*/
-      });
-    
-    function saveAs(uri, filename) {
-    	console.log("uri --> ");
-    	console.log(uri);
-    	
-        var link = document.createElement('a');
-        if (typeof link.download === 'string') {
-          link.href = uri;
-          link.download = filename;
+	// Initially hide the lower part of the application
+	$(".lower-band").hide();
 
-          //Firefox requires the link to be in the body
-          document.body.appendChild(link);
-
-          //simulate click
-          link.click();
-
-          //remove the link when done
-          document.body.removeChild(link);
-        } else {
-          window.open(uri);
-        }
-      }
 });
 
+// Function to add new SVG container
+function reAddSVGContainer(){
+	$("#svgDiv").empty();
+	$("#svgDiv").remove();
+	$("#chart").append("<div id=\"svgDiv\"></div>");
+}
+
+// Steps performed when dataset is loaded
 $( "#load").click(function() {
 	
+	// Initialize the usedSets in dataStructure
 	usedSets.length=0;
 	sets.length=0;
+
+	// Indicate that the dataloaded for the first time
 	isFirstLoad = true;
-	$("#svgDiv").empty();
-	$("#svgDiv").remove();
-	$("#chart").append("<div id=\"svgDiv\"></div>");
+
+	// Attach a new SVG container
+	reAddSVGContainer();
+
+	// Load the data from the JSON file
     var fileLink =  $( "#fileLink" ).val();
-    initData(fileLink);
-    $(".lower-band").show();
+	initData(fileLink);
+	
+	// Show the lower part of the application once the data is loaded
+	$(".lower-band").show();
+	
 });
 
+// Steps performed when the set visualization is re-rendered each time
 function reRenderVis(){
-	$("#svgDiv").empty();
-	$("#svgDiv").remove();
-	$("#chart").append("<div id=\"svgDiv\"></div>");
+	reAddSVGContainer();
 	subGroupsLinks = [];
 	run();
 }

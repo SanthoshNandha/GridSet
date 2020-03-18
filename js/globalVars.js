@@ -1,3 +1,13 @@
+/* 
+	* Author: Santhosh Nandhakumar
+	* eMail ID: nsanthosh2409@gmail.com
+ */
+
+ /* 
+	* Define and initialize all the application level variables
+ */
+
+
 //Set Boarders constants
 var TOPLEFT  = 1;
 var BOTTOMLEFT = 2;

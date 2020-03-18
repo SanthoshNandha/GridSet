@@ -1,3 +1,8 @@
+/* 
+	* Author: Santhosh Nandhakumar
+	* eMail ID: nsanthosh2409@gmail.com
+ */
+
 function renderCategoryFilter(categoryAttrs){
 
 	var card = d3.select("#category-attribute-accordion")
