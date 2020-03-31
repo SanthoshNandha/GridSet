@@ -393,7 +393,7 @@ function processData(data){
 	if(subGroupsInfo[0]){
 		linkThicknessFactor = ((subGroupsInfo[0].minSide/subGroupsInfo[0].size));
 	}
-	fixThicknessFactor(0.95);
+	fixThicknessFactor(0.99);
 }
 
 function createOprSet(set1Element, set2Element, opr_sym){

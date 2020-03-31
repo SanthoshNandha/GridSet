@@ -602,9 +602,9 @@ function colores(n) {
 
 function fixThicknessFactor(mutiplier){
 	for(var i=0; i<subGroupsInfo.length; i++){
-		if((subGroupsInfo[i].size * linkThicknessFactor) > subGroupsInfo[i].minSide){
+		if((subGroupsInfo[i].size * linkThicknessFactor) >= subGroupsInfo[i].minSide ){
 			linkThicknessFactor = (linkThicknessFactor * mutiplier);
-			fixThicknessFactor(mutiplier - 0.05);
+			fixThicknessFactor(mutiplier - 0.025);
 			break;
 		}
 	}

@@ -1184,7 +1184,13 @@ function renderVis(data){
 					return drawsubGroupLink(d);
 				})
 				.attr("stroke-width", function(d){
-					return (d.size) * linkThicknessFactor;
+					// return (d.size) * linkThicknessFactor;
+					if(d.size > 5){
+						return (d.size) * linkThicknessFactor;
+					}
+					else{
+						return 5 * linkThicknessFactor;
+					}
 				})
 				.attr("stroke-linecap","butt")
 				.attr("fill", "none")
@@ -1936,7 +1942,13 @@ function drawFixedLinks(processedSubGroupGroups){
 				return drawsubGroupLink(d);
 			})
 			.attr("stroke-width", function(d){
-				return (d.size) * linkThicknessFactor;
+				if(d.size > 5){
+					return (d.size) * linkThicknessFactor;
+				}
+				else{
+					return 5 * linkThicknessFactor;
+				}
+				
 			})
 			.attr("stroke-linecap","butt")
 			.attr("fill", "none")
