@@ -1,0 +1,26 @@
+[
+    {
+        "name" : "AcadameyAwards2017",
+        "link":"../data/AcadameyAwards2017/awards2017.json"
+    },
+    {
+        "name" : "Toy Example",
+        "link":"../data/toy/toy.json"
+    },
+    {
+        "name" : "Contries-Export",
+        "link":"../data/countries/exportcountries.json"
+    },
+    {
+        "name" : "Fruits",
+        "link":"../data/fruit/fruit.json"
+    },
+    {
+        "name" : "Simpsons",
+        "link":"../data/simpsons/simpsons.json"
+    },
+    {
+        "name" : "Social Graph",
+        "link":"../data/socialgraph/socialgraph.json"
+    }
+]

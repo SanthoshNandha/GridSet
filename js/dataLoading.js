@@ -1,3 +1,9 @@
+function loadDataSets(datalist){
+    for(var i=0; i < datalist.length; i++){
+        $('#fileLink').append($('<option>').val(datalist[i].link).text(datalist[i].name));
+    }
+}
+
 function initData(fileLink) {
     dataSetDescriptions = [];
         $.when($.ajax({url: fileLink, dataType: 'json'})).then(

@@ -5,8 +5,8 @@
 	"separator": ";",
 	"skip": 0,
 	"meta": [
-		{ "type": "id", "index": 0, "name": "Name" },
-		{ "type": "integer", "index": 8, "name": "Degree" }
+		{ "type": "id", "index": 0, "name": "Name", "tableDisplay":"true" },
+		{ "type": "integer", "index": 8, "name": "Degree", "tableDisplay":"true" }
 	],
 	"sets": [
 		{ "format": "binary", "start": 1, "end": 7 }

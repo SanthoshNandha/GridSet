@@ -1,0 +1,17 @@
+{
+	"file": "/data/toy/toy.csv",
+	"name": "Toy Example",
+	"header": 0,
+	"separator": ",",
+	"skip": 0,
+	"meta": [
+		{ "type": "id", "index": 0, "name": "Name", "tableDisplay":"true" },
+		{ "type": "picture", "index": 4, "name": "pic","tableDisplay":"false"}
+	],
+	"sets": [
+		{ "format": "binary", "start": 1, "end": 3 }
+	],
+    "author": "Santhosh",
+    "description": "A toy example to demonstrate GridSet",
+    "source": ""
+}

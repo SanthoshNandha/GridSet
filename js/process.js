@@ -296,11 +296,6 @@ function createLinks(sets){
 				 if(isSubSetPresent(id,targetSubSets) && linkedSubsets.indexOf(id) == -1 && subSet.coOrdinates ){
 					 links.push({"id":id, "setSize":subSetsize, "array": [subSet.viewBoxMid],"hullPoints":[subSet.ViewBoxhullPoints],"referenceLines" :link.referneceLine, "position": intersectionSize * linkThicknessFactor,"sourceSetId" : sourceSet.id });
 					 intersectionSize = intersectionSize + subSetsize;
-
-					 // Set minimum link size to the size of three elements
-					 if(subSetsize < 3 ){
-						intersectionSize = intersectionSize + 3;
-					 }
 					 linkedSubsets.push(id);
 				 }
 			 });

@@ -5,9 +5,9 @@
 	"separator": "\t",
 	"skip": 0,
 	"meta": [
-		{ "type": "id", "index": 0, "name": "Name" },
-		{ "type": "integer", "index": 7, "name": "age"},
-		{"type": "picture", "index": 8, "name": "picture"}
+		{ "type": "id", "index": 0, "name": "Name", "tableDisplay":"true" },
+		{ "type": "integer", "index": 7, "name": "age", "tableDisplay":"true"},
+		{"type": "picture", "index": 8, "name": "picture", "tableDisplay":"false"}
 	],
 	"sets": [
 		{ "format": "binary", "start": 1, "end": 6 }

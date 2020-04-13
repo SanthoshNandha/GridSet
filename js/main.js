@@ -59,6 +59,17 @@ function reAddSVGContainer(){
 	$("#chart").append("<div id=\"svgDiv\"></div>");
 }
 
+// Read dataset.json and load datasets
+
+$.when($.ajax({ url: '/data/datasets.json', dataType: 'json' })).then(
+	function (data, textStatus, jqXHR) {
+		loadDataSets(data);
+	},
+	function (data, textStatus, jqXHR) {
+		console.error('Error loading "' + this.url + '".');
+	}
+);
+
 // Steps performed when dataset is loaded
 $( "#load").click(function() {
 	

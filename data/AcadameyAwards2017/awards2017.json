@@ -1,0 +1,18 @@
+{
+	"file": "../data/acadameyAwards2017/AcamdameyAwards2017.csv",
+	"name": "Acadamey Awards 2017",
+	"header": 0,
+	"separator": ",",
+	"skip": 0,
+	"meta": [
+		{ "type": "id", "index": 0, "name": "Name","tableDisplay":"true" },
+		{ "type": "integer", "index": 1, "name": "Nominations","tableDisplay":"true"},	
+		{ "type": "text", "index": 2, "name": "Nominated 2017","tableDisplay":"true"}
+	],
+	"sets": [
+		{ "format": "binary", "start": 3, "end": 116 }
+	],
+    "author": "Santhosh Nandhakumar",
+    "description": "Acadamey Awards 2017 Nominations",
+    "source": "www.oscars.org/oscars/awards-databases-0"
+}
