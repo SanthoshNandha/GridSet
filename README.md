@@ -72,11 +72,12 @@ A demo instance of GridSet is avialable at [https://santhoshnandha.github.io/Gri
     	"source": ""
 	}
 
-1. Add the link of the JSON file as `<option>` to the `<Select>` tag with ID as "fileLink" in web\index.html
+1. Add the link of the JSON file as Json object to the array in the data/datsets.json file
 	### Example
 	```
-		<select name="file" id="fileLink">
-			<option value="/data/datasetName/datasetname.json">Dataset Name </option>
-		</select>
+		 {
+        	"name" : "AcadameyAwards2017",
+        	"link":"../data/AcadameyAwards2017/awards2017.json"
+    	}
 	```
 1. Restart the python server and go to [localhost:8000/web](http://localhost:8000/web). The new dataset will be visible in the dropdown box.
