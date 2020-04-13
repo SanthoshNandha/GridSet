@@ -75,7 +75,7 @@ A demo instance of GridSet is avialable at [https://santhoshnandha.github.io/Gri
 1. Add the link of the JSON file as Json object to the array in the data/datsets.json file
 	### Example
 	```
-		 {
+	{
         	"name" : "AcadameyAwards2017",
         	"link":"../data/AcadameyAwards2017/awards2017.json"
     	}
