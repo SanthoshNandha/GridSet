@@ -4,6 +4,14 @@
         "link":"../data/AcadameyAwards2017/awards2017.json"
     },
     {
+        "name" : "Global Disputes",
+        "link":"../data/disputes/dispute.json"
+    },
+    {
+        "name" : "IMDB Movies",
+        "link":"../data/IMDB Movies/IMDB.json"
+    },
+    {
         "name" : "Toy Example",
         "link":"../data/toy/toy.json"
     },
