@@ -1663,7 +1663,7 @@ function renderShapeSize(){
 			}
 		}
 		else{
-			console.log("new changes 7 !!");
+			// console.log("new changes 7 !!");
 			pixelAttrSizeScale.domain([numericAttrDomins[selectedSizeAttr].min,numericAttrDomins[selectedSizeAttr].max]);
 			d3.selectAll(".pathElement")
 		    	.attr("d",function(d){

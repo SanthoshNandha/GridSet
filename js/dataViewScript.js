@@ -251,7 +251,7 @@ function generateDataView(){
 					d3.selectAll(".pathElement_"+RowID)
 						.style("opacity",function(d){
 							if(d["imgError"] == true){
-								console.log("in true");
+								// console.log("in true");
 								return "1";
 							} 
 							else{

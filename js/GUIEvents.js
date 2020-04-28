@@ -1,7 +1,7 @@
 function initializeGUIEvents(){
 	
 	d3.select("#shapeShape").on("change",function(){
-		console.log("changed !!! ");
+		// console.log("changed !!! ");
 		renderShapeSize();
 		renderSizeLegend();
 		renderOrderPixel();
@@ -34,12 +34,12 @@ function initializeGUIEvents(){
 	});
 	
 	d3.select("#shapeBar").on("change",function(){
-		console.log("changed !!! ");
+		// console.log("changed !!! ");
 		renderElementCharts();
 	});
 	
 	d3.selectAll("input[name='optradio']").on("change", function() {
-		console.log("changed");
+		// console.log("changed");
 		GROUPED_BY = d3.selectAll("input[name='optradio']:checked").attr("value");
 		
 		if(GROUPED_BY == GROUP_BY_SET){
@@ -138,7 +138,7 @@ d3.select("#attributeQueryClear").on("click",function(d){
 
 d3.selectAll(".setQueryRadio").on("change",function(){
 	
-	console.log("clicked !!");
+	// console.log("clicked !!");
 	
 	/*activeSubGroupNames=[];
 	activeSubGroups = [];

@@ -96,7 +96,7 @@ function buildAttrSets(){
 					var maxDeg = $("#attributeQueryMaxBox_"+key).val();
 					
 					attrSliders[value.name].bootstrapSlider('setValue', [Number(minDeg),Number(maxDeg)]);
-					console.log(degreeSlider.bootstrapSlider('getValue'));
+					// console.log(degreeSlider.bootstrapSlider('getValue'));
 				})
 				
 				$('#size-select')
