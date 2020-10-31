@@ -40,7 +40,7 @@ function processSet(sets,layout){
 		//console.log("subSetTree -- " + i + " -- " + JSON.stringify(sets[i]["subSetTree"]));
 //		console.log(sets[i]["subSetTree"]);
 		rowsCols = gridTreeMap.generate(sets[i]["subSetTree"],"subsetTree"); 
-		console.log("subSetTreeSet");
+		// console.log("subSetTreeSet");
 		
 		sets[i]["rows"] = rowsCols[0];
 		sets[i]["cols"] = rowsCols[1];

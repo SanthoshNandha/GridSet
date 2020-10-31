@@ -2,15 +2,21 @@
 
 ## About
 
-GridSet is a web-based novel interactive visualization technique for visualizing sets and a large number of their individual elements and associated attributes. Each set representation is composed of glyphs, which represent individual elements and their numerous attributes utilizing different visual encodings.
+GridSet is a set visualization for exploring elements, their attributes, intersections, as well as entire sets. In this set visualization, each set representation is composed of glyphs, which represent individual elements and their attributes utilizing different visual encodings. In each set, elements are organized within a grid treemap layout that can provide space-efficient overviews of the elements structured by set intersections across multiple sets. These intersecting elements can be connected among sets through visual links. These visual representations for the individual set, elements, and intersection in GridSet facilitate novel interaction approaches for undertaking analysis tasks by utilizing both macroscopic views of sets, as well as microscopic views of elements and attribute details. In order to perform multiple set operations, GridSet supports a simple and straightforward process for set operations through dragging and dropping set objects. 
+
+## View in GitHub
+
+You can view the GitHub project at [https://github.com/UAHVis/GridSet](https://github.com/UAHVis/GridSet)
+
 
 ## Demo
 
-A demo instance of GridSet is avialable at [https://santhoshnandha.github.io/GridSet/web/](https://santhoshnandha.github.io/GridSet/web/)
+A demo (Academy Award dataset) of GridSet is available at  [https://UAHVis.github.io/GridSet/web/](https://UAHVis.github.io/GridSet/web/)
+
 
 ## Local Deployment
 
-1. Clone the repository using ```git clone``` or download and extract the [ZIP file](https://github.com/SanthoshNandha/GridSet/archive/master.zip).
+1. Clone the repository using ```git clone``` or download and extract the [ZIP file](https://github.com/UAHVis/GridSet/archive/master.zip).
 1. Launch the [Python SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html) in the project directory.
 	
 	* Python 2
@@ -25,14 +31,14 @@ A demo instance of GridSet is avialable at [https://santhoshnandha.github.io/Gri
 
 1. View GridSet in your browser at [localhost:8000/web](http://localhost:8000/web).
 
-## To Add new Dataset
+## To Add a New Dataset
 
-1. Create a new folder inside \data folder
-1. Add the dataset in the CSV format into the created folder
+1. Create a new folder within the \data folder.
+1. Add the dataset in the CSV format to the created folder
 	* Each row is a Set Element
 	* Each column is an Element Attribute or a Set
 	
-1. Create the metadata file (JSON file) for the CSV inside the same folder
+1. Create the metadata file (JSON file) for the CSV within the same folder
 	#### Example JSON format
 	```
 	{	
@@ -77,7 +83,9 @@ A demo instance of GridSet is avialable at [https://santhoshnandha.github.io/Gri
 	```
 	{
         	"name" : "AcadameyAwards2017",
-        	"link":"../data/AcadameyAwards2017/awards2017.json"
+        	"link":"../data/AcadameyAwards2017/awards2017.json",
+			"dataname": "academyAwards"
     	}
 	```
-1. Restart the python server and go to [localhost:8000/web](http://localhost:8000/web). The new dataset will be visible in the dropdown box.
+1. Restart the python server and go to [localhost:8000/web/?dataset=academyAwards](http://localhost:8000/web/?dataset=academyAwards). The new dataset will be visible in the dropdown box.
+1. Note: The value of the "dataname" property in the datsets.json is used as the url parameter value.

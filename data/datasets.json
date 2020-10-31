@@ -1,34 +1,42 @@
 [
     {
-        "name" : "AcadameyAwards2017",
-        "link":"../data/AcadameyAwards2017/awards2017.json"
+        "name" : "Academy Awards 2017",
+        "link":"../data/AcadameyAwards2017/awards2017.json",
+        "dataname": "academyAwards"
     },
     {
         "name" : "Global Disputes",
-        "link":"../data/disputes/dispute.json"
+        "link":"../data/disputes/dispute.json",
+        "dataname": "globalDisputes"
     },
     {
         "name" : "IMDB Movies",
-        "link":"../data/IMDB Movies/IMDB.json"
+        "link":"../data/IMDB Movies/IMDB.json",
+        "dataname": "IMDBMovies"
     },
     {
         "name" : "Toy Example",
-        "link":"../data/toy/toy.json"
+        "link":"../data/toy/toy.json",
+        "dataname": "toyExample"
     },
     {
-        "name" : "Contries-Export",
-        "link":"../data/countries/exportcountries.json"
+        "name" : "Countries-Export",
+        "link":"../data/countries/exportcountries.json",
+        "dataname": "contriesExport"
     },
     {
         "name" : "Fruits",
-        "link":"../data/fruit/fruit.json"
+        "link":"../data/fruit/fruit.json",
+        "dataname": "fruits"
     },
     {
         "name" : "Simpsons",
-        "link":"../data/simpsons/simpsons.json"
+        "link":"../data/simpsons/simpsons.json",
+        "dataname": "simpsons"
     },
     {
         "name" : "Social Graph",
-        "link":"../data/socialgraph/socialgraph.json"
+        "link":"../data/socialgraph/socialgraph.json",
+        "dataname": "socialgraph"
     }
 ]

@@ -1,5 +1,5 @@
 {
-	"file": "../data/acadameyAwards2017/AcamdameyAwards2017.csv",
+	"file": "../data/AcadameyAwards2017/AcamdameyAwards2017.csv",
 	"name": "Acadamey Awards 2017",
 	"header": 0,
 	"separator": ",",

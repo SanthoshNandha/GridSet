@@ -1,6 +1,18 @@
 function loadDataSets(datalist){
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    var selectedDataSet = "academyAwards";
+
+    if(urlParams.has('dataset')){
+        selectedDataSet = urlParams.get('dataset')
+    }
+    
     for(var i=0; i < datalist.length; i++){
-        $('#fileLink').append($('<option>').val(datalist[i].link).text(datalist[i].name));
+        if(datalist[i].dataname == selectedDataSet){
+            $('#fileLink').append($('<option>').val(datalist[i].link).text(datalist[i].name));
+            break;
+        }
     }
 }
 

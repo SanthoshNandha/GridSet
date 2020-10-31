@@ -1,5 +1,5 @@
 {
-	"file": "/data/toy/toy.csv",
+	"file": "../data/toy/toy.csv",
 	"name": "Toy Example",
 	"header": 0,
 	"separator": ",",

@@ -61,7 +61,9 @@ function reAddSVGContainer(){
 
 // Read dataset.json and load datasets
 
-$.when($.ajax({ url: '/data/datasets.json', dataType: 'json' })).then(
+//https://uahvis.github.io/GridSet/data/datasets.json
+
+$.when($.ajax({ url: '../data/datasets.json', dataType: 'json' })).then(
 	function (data, textStatus, jqXHR) {
 		loadDataSets(data);
 	},
